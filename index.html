@@ -47,9 +47,11 @@
   .app{ width:100%; max-width:540px; margin:0 auto; padding:24px 22px 40px; display:flex; flex-direction:column; flex:1; min-height:100vh; }
 
   .topbar{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
-  .brand{ display:flex; align-items:center; gap:10px; flex:1; min-width:0; }
-  .brand .lamp{ flex:none; width:13px; height:13px; border-radius:50%; background:var(--accent); box-shadow:0 0 14px 1px var(--glow); transition:background .45s var(--ease), box-shadow .45s var(--ease); }
+  .brand{ display:flex; align-items:flex-start; gap:10px; flex:1; min-width:0; }
+  .brand .lamp{ flex:none; margin-top:5px; width:13px; height:13px; border-radius:50%; background:var(--accent); box-shadow:0 0 14px 1px var(--glow); transition:background .45s var(--ease), box-shadow .45s var(--ease); }
+  .wordmark{ display:flex; flex-direction:column; gap:2px; min-width:0; }
   .brand .name{ font-family:"Bricolage Grotesque", sans-serif; font-weight:700; font-size:clamp(15px, 4.6vw, 18px); letter-spacing:-.01em; line-height:1.12; }
+  .byline{ font-size:11px; font-weight:500; letter-spacing:.01em; line-height:1.15; color:var(--accent); transition:color .45s var(--ease); }
   .topbar-right{ display:flex; align-items:center; gap:8px; flex:none; }
   .today-pill{ display:flex; align-items:baseline; gap:7px; padding:7px 13px; border-radius:999px; background:var(--surface); border:1px solid var(--line); font-size:12.5px; color:var(--ink-dim); }
   .today-pill b{ color:var(--ink); font-weight:600; }
@@ -167,7 +169,10 @@
     <header class="topbar">
       <div class="brand">
         <span class="lamp" aria-hidden="true"></span>
-        <span class="name">Benkyo-Pomodoro Study Timer</span>
+        <span class="wordmark">
+          <span class="name">Benkyo-Pomodoro Study Timer</span>
+          <span class="byline">Developed By Aaryan Jain and Advik Jain</span>
+        </span>
       </div>
       <div class="topbar-right">
         <div class="today-pill" id="todayPill" title="Your progress today">
